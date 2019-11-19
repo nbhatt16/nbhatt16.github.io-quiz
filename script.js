@@ -42,22 +42,22 @@ var questions = [{
 }
 ];
 
-var sec = 400;
-var time = setInterval(myTimer, 1000);
+// var sec = 400;
+// var time = setInterval(myTimer, 1000);
 
-function myTimer() {
-    document.getElementById('timer').innerHTML = sec + "sec left";
-    sec--;
-    if (sec == -1) {
-        clearInterval(time);
-        alert("Time out!! :(");
-    }
-};
+// function myTimer() {
+//     document.getElementById('timer').innerHTML = sec + "sec left";
+//     sec--;
+//     if (sec == -1) {
+//         clearInterval(time);
+//         alert("Time out!! :(");
+//     }
+// };
 
 var game = {
     questions:questions,
     currentQuestion:0, 
-    counter:30, 
+    counter:15, 
     correct:0,
     incorrect:0,
     unanswered:0,
@@ -72,14 +72,14 @@ var game = {
     },
     loadQuestion: function (){
         timer = setInterval(game.countdown,1000);
-        $('#subwrapper').html("<h2> Time to Guess: <span id ='counter'>30</span> Seconds</h2>");
+        $('#subwrapper').html("<h2> Time to Guess: <span id ='counter'>15</span> Seconds</h2>");
         $('#subwrapper').append('<h2>'+questions[game.currentQuestion].question+'</h2>');
         for(var i=0;i<questions[game.currentQuestion].answers.length;i++){
             $('#subwrapper').append('<button class="answer-button id="button- '+i+'" data-name="'+questions[game.currentQuestion].answers[i]+'">'+questions[game.currentQuestion].answers[i]+'</button>');
         }
     },
     nextQuestion: function(){
-        game.counter = 30;
+        game.counter = 15;
         $('#counter').html(game.counter);
         game.currentQuestion++;
         game.loadQuestion();
@@ -135,9 +135,9 @@ var game = {
         $('#subwrapper').html('<h2> Wrong!</h2>');
         $('#subwrapper').append('<h3>The correct answer was: '+questions[game.currentQuestion].correctAnswer+'</h3>');
         if(game.currentQuestion==questions.length-1){
-            setTimeout(game.results,2*1000);
+            setTimeout(game.results,3*1000);
         } else{
-            setTimeout(game.nextQuestion,2*1000);
+            setTimeout(game.nextQuestion,3*1000);
         }if(game.currentQuestion!==this.answeredCorrectly){
             this.countdown(game.countdown, -2)
         }
