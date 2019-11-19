@@ -138,6 +138,8 @@ var game = {
             setTimeout(game.results,2*1000);
         } else{
             setTimeout(game.nextQuestion,2*1000);
+        }if(game.currentQuestion!==this.answeredCorrectly){
+            this.countdown(game.countdown, -2)
         }
 
     },
