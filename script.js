@@ -14,31 +14,31 @@ $(document).on('click','#reset',function(){
 })
 
 var questions = [{
-    question: "what year did The Simpsons first air?",
-    answers: ["1999", "1999", "1999", "2000"],
-    correctAnswer: "2000",
-    incorrectAnswer: "1999",
+    question: "What year did The Simpsons first air?",
+    answers: ["1999", "1989", "1986", "1994"],
+    correctAnswer: "1989",
+    incorrectAnswer: ["1999","1986","1994"],
 }, {
-    question: "what year did The Simpsons first air?",
-    answers: ["1999", "1999", "1999", "2000"],
-    correctAnswer: "2000",
-    incorrectAnswer: "1999",
+    question: "How old is Bart Simpson?",
+    answers: ["14", "9", "10", "11"],
+    correctAnswer: "10",
+    incorrectAnswer: ["14","9","11"],
 }, {
-    question: "what year did The Simpsons first air?",
-    answers: ["1999", "1999", "1999", "2000"],
-    correctAnswer: "2000",
-    incorrectAnswer: "1999",
+    question: "What is the bartenders name?",
+    answers: ["Joe", "Curly", "Lenny", "Moe"],
+    correctAnswer: "Moe",
+    incorrectAnswer: ["Joe", "Curly", "Lenny"],
 },{
-    question: "what year did The Simpsons first air?",
-    answers: ["1999", "1999", "1999", "2000"],
-    correctAnswer: "2000",
-    incorrectAnswer: "1999",
+    question: "What was Maggies first word?",
+    answers: ["Daddy", "Mommy", "Gun", "Hasn't spoken"],
+    correctAnswer: "Daddy",
+    incorrectAnswer:  ["Mommy", "Gun", "Hasn't spoken"],
 },
 {
-    question: "what year did The Simpsons first air?",
-    answers: ["1999", "1999", "1999", "2000"],
-    correctAnswer: "2000",
-    incorrectAnswer: "1999",
+    question: "Who is Arnie Pie?",
+    answers: ["Teacher", "Bartender", "Marges love interest", "Traffic reporter"],
+    correctAnswer: "Traffic reporter",
+    incorrectAnswer: ["Teacher", "Bartender", "Marges love interest"],
 }
 ];
 
